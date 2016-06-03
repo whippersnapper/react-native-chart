@@ -1,8 +1,9 @@
 'use strict';
-import React, {
-	PropTypes,
-	requireNativeComponent,
+import React, { Component, PropTypes } from 'react';
+import {
+  requireNativeComponent
 } from 'react-native';
+
 const { processColor } = React;
 
 /** A native reference to the chart view */
@@ -28,7 +29,7 @@ const processData = (chartData) => {
 };
 
 /** Our bridge component */
-export default class RNChart extends React.Component {
+export default class RNChart extends Component {
 	static propTypes = {
 
 		chartData: PropTypes.arrayOf(
